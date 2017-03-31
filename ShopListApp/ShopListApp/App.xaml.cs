@@ -13,7 +13,7 @@ namespace ShopListApp
         {
             InitializeComponent();
 
-            MainPage = new ShopListApp.MainPage();
+            MainPage = new NavigationPage(new ShopListApp.Pages.ShopListPage());
         }
 
         protected override void OnStart()
