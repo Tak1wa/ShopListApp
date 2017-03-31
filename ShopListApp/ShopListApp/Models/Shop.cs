@@ -9,6 +9,13 @@ namespace ShopListApp.Models
 {
     public class Shop : BindableBase
     {
+        private string _ImageUrl;
+        public string ImageUrl
+        {
+            get { return _ImageUrl; }
+            set { SetProperty(ref _ImageUrl, value); }
+        }
+
         private string _Name;
         public string Name
         {
@@ -30,15 +37,15 @@ namespace ShopListApp.Models
             set { SetProperty(ref _Tel, value); }
         }
 
-        private int _Longitude;
-        public int Longitude
+        private double _Longitude;
+        public double Longitude
         {
             get { return _Longitude; }
             set { SetProperty(ref _Longitude, value); }
         }
 
-        private int _Latitude;
-        public int Latitude
+        private double _Latitude;
+        public double Latitude
         {
             get { return _Latitude; }
             set { SetProperty(ref _Latitude, value); }

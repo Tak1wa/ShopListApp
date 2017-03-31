@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopListApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace ShopListApp.Pages
         public ShopListPage()
         {
             InitializeComponent();
+        }
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var detailPage = new ShopDetailPage((ShopDetailViewModel)e.Item);
+            Navigation.PushAsync(detailPage);
         }
     }
 }

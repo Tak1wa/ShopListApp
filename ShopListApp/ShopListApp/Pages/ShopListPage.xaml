@@ -7,6 +7,14 @@
         <vm:ShopListViewModel />
     </ContentPage.BindingContext>
 
-    <ListView ItemsSource="{Binding Shops}" />
+    <ListView ItemsSource="{Binding Shops}" ItemTapped="ListView_ItemTapped" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell ImageSource="{Binding ImageUrl.Value}" 
+                           Text="{Binding Name.Value}"
+                           Detail="{Binding Address.Value}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>

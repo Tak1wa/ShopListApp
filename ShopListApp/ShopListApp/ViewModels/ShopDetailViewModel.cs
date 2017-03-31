@@ -11,14 +11,16 @@ namespace ShopListApp.ViewModels
 {
     public class ShopDetailViewModel
     {
+        public ReactiveProperty<string> ImageUrl { get; set; }
         public ReactiveProperty<string> Name { get; set; }
         public ReactiveProperty<string> Address { get; set; }
         public ReactiveProperty<string> Tel { get; set; }
-        public ReactiveProperty<int> Longitude { get; set; }
-        public ReactiveProperty<int> Latitude { get; set; }
+        public ReactiveProperty<double> Longitude { get; set; }
+        public ReactiveProperty<double> Latitude { get; set; }
 
         public ShopDetailViewModel(Shop shop)
         {
+            ImageUrl = shop.ObserveProperty(s => s.ImageUrl).ToReactiveProperty();
             Name = shop.ObserveProperty(s => s.Name).ToReactiveProperty();
             Address = shop.ObserveProperty(s => s.Address).ToReactiveProperty();
             Tel = shop.ObserveProperty(s => s.Tel).ToReactiveProperty();

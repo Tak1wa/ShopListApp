@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopListApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,17 @@ namespace ShopListApp.Pages
         public ShopDetailPage()
         {
             InitializeComponent();
+        }
+
+        public ShopDetailPage(ShopDetailViewModel viewModel) : this()
+        {
+            BindingContext = viewModel;
+            mapArea.MoveToRegion(
+                MapSpan.FromCenterAndRadius(
+                    new Position(viewModel.Latitude.Value, viewModel.Longitude.Value),
+                    Distance.FromMiles(1)
+                    )
+                );
         }
     }
 }
