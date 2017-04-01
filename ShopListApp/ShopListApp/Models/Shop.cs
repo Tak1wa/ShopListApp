@@ -50,5 +50,14 @@ namespace ShopListApp.Models
             get { return _Latitude; }
             set { SetProperty(ref _Latitude, value); }
         }
+
+        public void PhoneCall()
+        {
+            var phoneDialer = Plugin.Messaging.CrossMessaging.Current.PhoneDialer;
+            if(phoneDialer.CanMakePhoneCall)
+            {
+                phoneDialer.MakePhoneCall(Tel);
+            }
+        }
     }
 }

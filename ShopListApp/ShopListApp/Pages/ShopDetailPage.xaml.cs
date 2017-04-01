@@ -22,12 +22,22 @@ namespace ShopListApp.Pages
         public ShopDetailPage(ShopDetailViewModel viewModel) : this()
         {
             BindingContext = viewModel;
+
+            var shopPosition =
+                    new Position(viewModel.Latitude.Value, viewModel.Longitude.Value);
             mapArea.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
-                    new Position(viewModel.Latitude.Value, viewModel.Longitude.Value),
-                    Distance.FromMiles(1)
+                    shopPosition,
+                    Distance.FromKilometers(4)
                     )
                 );
+            mapArea.Pins.Add(new Pin
+            {
+                Type = PinType.Place,
+                Position = shopPosition,
+                Label = viewModel.Name.Value,
+                Address = viewModel.Address.Value
+            });
         }
     }
 }

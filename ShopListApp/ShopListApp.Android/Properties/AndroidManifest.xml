@@ -5,6 +5,6 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="ShopListApp.Android">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="hoge" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB-rCdaiD04THJ9APkhrcuSvXtEjuuR4oE" />
 	</application>
 </manifest>

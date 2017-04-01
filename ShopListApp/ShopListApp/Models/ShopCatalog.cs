@@ -21,7 +21,7 @@ namespace ShopListApp.Models
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Odori_Park_Sapporo.JPG/220px-Odori_Park_Sapporo.JPG",
                 Latitude = 43.060747,
                 Longitude = 141.347775,
-                Tel = "080-9999-9999"
+                Tel = "090-6443-4949"
             });
             Shops.Add(new Shop
             {
@@ -30,7 +30,7 @@ namespace ShopListApp.Models
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sapporo_television_tower_01.jpg/200px-Sapporo_television_tower_01.jpg",
                 Latitude = 43.062158,
                 Longitude = 141.356401,
-                Tel = "080-9999-9999"
+                Tel = ""
             });
         }
     }
